@@ -23,14 +23,7 @@ import org.testng.annotations.AfterSuite;
 public class DemoTest {
 	
 	WebDriver driver;
-	LoginPage loginpage;
-	Properties prop;
-	HomePage homepage;
 	
-	public DemoTest() {
-		
-	}
- 
     @Test
     public void loginPageTitleTest() { 
 		 
