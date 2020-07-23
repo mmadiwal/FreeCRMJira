@@ -24,6 +24,11 @@ public class DemoTest {
 	
 	WebDriver driver;
 	
+	
+	public DemoTest() {
+		
+	}
+ 
     @Test
     public void loginPageTitleTest() { 
 		 
@@ -36,9 +41,8 @@ public class DemoTest {
 				driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 				driver.get("https://ui.freecrm.com/");
 				String title=driver.getTitle();
-				System.out.println(driver.getCurrentUrl()) ;
-				System.out.println(" Jenkins Configuration with selenium has been successfully completed");
-		  driver.quit();
+				System.out.println(" FreeCrm login page title :"+ title);
+		        driver.quit();
 		  }    
 	
 }
