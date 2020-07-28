@@ -22,7 +22,7 @@ import org.testng.annotations.AfterSuite;
  
 public class DemoTest {
 	
-	WebDriver driver;
+	//WebDriver driver;
 	
 	
 	public DemoTest() {
