@@ -1,5 +1,7 @@
 package com.xpand;
  
+import static org.testng.Assert.assertEquals;
+
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -32,17 +34,30 @@ public class DemoTest {
     @Test
     public void loginPageTitleTest() { 
 		 
-			    System.setProperty("webdriver.chrome.silentOutput", "true");
-				//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+			   System.setProperty("webdriver.chrome.silentOutput", "true");
 			   WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
-				driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 				driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 				driver.get("https://ui.freecrm.com/");
 				String title=driver.getTitle();
-				System.out.println(" FreeCrm login page title "+title); 
-		        //driver.quit();
-		  }    
+				assertEquals(title, "Cogmento CRM");
+				System.out.println("Title Verified"); 
+		        driver.quit();
+		  }   
+    @Test
+    public void verifyUrl() {
+    	
+ 	   System.setProperty("webdriver.chrome.silentOutput", "true");
+	   WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+		driver.get("https://ui.freecrm.com/");
+		String url=driver.getCurrentUrl();
+		assertEquals(url, "https://ui.freecrm.com/");
+		System.out.println("Url Verified");
+        driver.quit();
+    }
 	
 }
