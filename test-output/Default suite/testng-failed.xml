@@ -5,9 +5,11 @@
     <classes>
       <class name="com.xpand.DemoTest">
         <methods>
+          <include name="login"/>
           <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyDocumentsTab"/>
+          <include name="initialization"/>
+          <include name="loginPageTitleTest"/>
+          <include name="verifyUrl"/>
         </methods>
       </class> <!-- com.xpand.DemoTest -->
     </classes>

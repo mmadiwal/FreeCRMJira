@@ -36,6 +36,7 @@ public class DemoTest {
 	@BeforeTest
 	public void initialization() {
 		     System.setProperty("webdriver.chrome.silentOutput", "true");
+		     //System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		     WebDriverManager.chromedriver().setup();
 			 driver = new ChromeDriver();
 			 driver.manage().window().maximize();
@@ -61,8 +62,10 @@ public class DemoTest {
     @Test
     public void login() {
     	 driver.findElement(By.name("email")).sendKeys("madiwal.m@gmail.com");
-	     driver.findElement(By.name("password")).sendKeys("madiwal.m@gmail.com");
+	     driver.findElement(By.name("password")).sendKeys("Alti@33533533");
 	     driver.findElement(By.xpath("//div[text()='Login']")).click();
+	     String HomePagetext =driver.findElement(By.xpath("//span[text()='Home']")).getText();
+	     assertEquals(HomePagetext, "Home");
 	     System.out.println("Logged in to FreeCRM successfully");
     }
     
