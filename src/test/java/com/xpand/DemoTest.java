@@ -36,14 +36,14 @@ public class DemoTest {
     @Test
     public void loginPageTitleTest() {
 				String title=driver.getTitle();
-				assertEquals(title, "Cogmento CRMM");
+				assertEquals(title, "Cogmento CRM");
 				System.out.println("Title Verified"); 
 		  }  
     
     @Test
     public void verifyUrl() {
 		String url=driver.getCurrentUrl();
-		assertEquals(url, "https://ui.freecrm.comM/");
+		assertEquals(url, "https://ui.freecrm.com/");
 		System.out.println("Url Verified");
     }
     
