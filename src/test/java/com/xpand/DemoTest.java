@@ -2,32 +2,20 @@ package com.xpand;
  
 import static org.testng.Assert.assertEquals;
 
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-
-
-
-
  
 public class DemoTest {
 	
 	WebDriver driver;
-	
 	
 	public DemoTest() {
 		
@@ -48,14 +36,14 @@ public class DemoTest {
     @Test
     public void loginPageTitleTest() {
 				String title=driver.getTitle();
-				assertEquals(title, "Cogmento CRM");
+				assertEquals(title, "Cogmento CRMM");
 				System.out.println("Title Verified"); 
 		  }  
     
     @Test
     public void verifyUrl() {
 		String url=driver.getCurrentUrl();
-		assertEquals(url, "https://ui.freecrm.com/");
+		assertEquals(url, "https://ui.freecrm.comM/");
 		System.out.println("Url Verified");
     }
     
